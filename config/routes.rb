@@ -5,6 +5,7 @@ require 'sidekiq/web'
 Rails.application.routes.draw do
   resources :channels do
     resource :channel_user
+    resources :messages
   end
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
